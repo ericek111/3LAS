@@ -18,7 +18,7 @@ class WebRTC {
 
     private RtcPeer: RTCPeerConnection;
     private WebSocket: WebSocketClient;
-    private ActivityTimer: number;
+    private ActivityTimer: any; // TODO: Lazy fix
 
     public ActivityCallback: () => void;
     public DisconnectCallback: () => void;

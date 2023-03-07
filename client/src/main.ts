@@ -1,13 +1,13 @@
-/// <reference path="../../../client/src/3las.ts" />
-/// <reference path="../../../client/src/3las.webrtc.ts" />
-/// <reference path="../../../client/src/fallback/3las.fallback.ts" />
-/// <reference path="../../../client/src/fallback/3las.formatreader.ts" />
-/// <reference path="../../../client/src/fallback/formats/3las.formatreader.mpeg.ts" />
-/// <reference path="../../../client/src/fallback/formats/3las.formatreader.wav.ts" />
-/// <reference path="../../../client/src/fallback/3las.liveaudioplayer.ts" />
-/// <reference path="../../../client/src/util/3las.helpers.ts" />
-/// <reference path="../../../client/src/util/3las.logging.ts" />
-/// <reference path="../../../client/src/util/3las.websocketclient.ts" />
+/// <reference path="3las.ts" />
+/// <reference path="3las.webrtc.ts" />
+/// <reference path="fallback/3las.fallback.ts" />
+/// <reference path="fallback/3las.formatreader.ts" />
+/// <reference path="fallback/formats/3las.formatreader.mpeg.ts" />
+/// <reference path="fallback/formats/3las.formatreader.wav.ts" />
+/// <reference path="fallback/3las.liveaudioplayer.ts" />
+/// <reference path="util/3las.helpers.ts" />
+/// <reference path="util/3las.logging.ts" />
+/// <reference path="util/3las.websocketclient.ts" />
 
 var Stream: _3LAS;
 var DefaultVolume: number = 0.5;

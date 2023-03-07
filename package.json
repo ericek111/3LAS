@@ -1,0 +1,31 @@
+{
+  "name": "3las",
+  "version": "1.0.0",
+  "description": "3LAS (Low Latency Live Audio Streaming) ====",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "buildclient": "mkdir -p build/client/ && cp -r client/assets/* build/client/ && npx tsc -p client/tsconfig.json",
+    "buildserver": "mkdir -p build/server/ && cp -r server/assets/* build/server/  && npx tsc -p server/tsconfig.json",
+    "startclient": "cd build/client/ && python3 -m http.server 8000",
+    "startserver": "cd build/server/ && ./start.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericek111/3LAS.git"
+  },
+  "keywords": [],
+  "author": "JoJoBond",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ericek111/3LAS/issues"
+  },
+  "homepage": "https://github.com/ericek111/3LAS#readme",
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "wrtc": "^0.4.7",
+    "ws": "^8.12.1"
+  }
+}
