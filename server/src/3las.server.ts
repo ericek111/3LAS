@@ -67,6 +67,8 @@ class RtcProvider {
         await this.RtcDistributePeer.setRemoteDescription(offer);
 
         let answer = await this.RtcDistributePeer.createAnswer();
+        // TODO: Same as in client/src/3las.webrtc.ts
+        answer.sdp = answer.sdp.replace(/a=fmtp:111/, 'a=fmtp:111 minptime=10; useinbandfec=0; stereo=1; maxplaybackrate=48000;maxaveragebitrate=256000;sprop-stereo=1\r\na=fmtp:111');
 
         await this.RtcDistributePeer.setLocalDescription(new wrtc.RTCSessionDescription(answer));
 

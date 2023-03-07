@@ -137,6 +137,8 @@ class WebRTC {
             await this.RtcPeer.setRemoteDescription(new RTCSessionDescription(message.data));
 
             let answer = await this.RtcPeer.createAnswer();
+            // TODO: Same as in server/src/3las.server.ts
+            answer.sdp = answer.sdp.replace('useinbandfec=1', 'minptime=10; useinbandfec=0; stereo=1; maxplaybackrate=48000;maxaveragebitrate=256000;sprop-stereo=1');
 
             await this.RtcPeer.setLocalDescription(new RTCSessionDescription(answer));
 
